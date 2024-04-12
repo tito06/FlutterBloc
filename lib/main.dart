@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_bloc/bloc/counter/counter_bloc.dart';
+import 'package:flutter_application_bloc/bloc/user/user_bloc.dart';
+import 'package:flutter_application_bloc/repository/user_repository.dart';
 import 'package:flutter_application_bloc/ui/counter_sceen.dart';
+import 'package:flutter_application_bloc/ui/user_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 
@@ -14,9 +17,9 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => CounterBloc(),
+      create: (_) => UserBloc(UserRepository()),
       child: const MaterialApp(
-      home: CounterScreen()
+      home: UserScreen()
     ),
       );
   }
