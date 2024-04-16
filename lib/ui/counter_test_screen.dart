@@ -24,6 +24,7 @@ class __CounterTestScreen extends State<CounterTestScreen> {
             builder: (context, state) {
             return Center(
             child: Text(state.count.toString(),
+            
              style: const TextStyle(fontSize: 60.0),),
           );
 
