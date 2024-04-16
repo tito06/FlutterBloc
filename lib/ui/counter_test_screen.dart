@@ -40,14 +40,14 @@ class __CounterTestScreen extends State<CounterTestScreen> {
 
                 context.read<CounterTestBloc>().add(IncreaseCount());
               },
-               child: Text("Increase")),
+               child:const Text("Increase")),
 
               const SizedBox(width: 5),
 
                ElevatedButton(onPressed: (){
                 context.read<CounterTestBloc>().add(DecreaseCount());
                },
-               child: Text("Decrease"))
+               child:const Text("Decrease"))
             ],
           )
         ],
